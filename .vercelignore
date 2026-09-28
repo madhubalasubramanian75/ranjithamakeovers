@@ -1,0 +1,5 @@
+cloudflared.exe
+*.zip
+*.bak
+scratch/
+server.py
