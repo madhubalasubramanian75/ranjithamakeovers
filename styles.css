@@ -1585,3 +1585,60 @@ button, input, select, textarea {
   min-width: 44px;
   min-height: 44px;
 }
+
+/* =========================================================
+   ACCESSIBILITY — Skip Link
+   ========================================================= */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.sr-only:focus,
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* =========================================================
+   FAQ ACCORDION — Details/Summary
+   ========================================================= */
+details summary {
+  cursor: pointer;
+  list-style: none;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details[open] summary .faq-chevron,
+.group[open] .transition-transform {
+  transform: rotate(180deg);
+}
+details summary svg.shrink-0 {
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+details[open] summary svg.shrink-0 {
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   SERVICE AREAS SECTION
+   ========================================================= */
+#service-areas .list-none {
+  list-style: none;
+  padding-left: 0;
+}
+
