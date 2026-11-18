@@ -18,12 +18,31 @@
       ]
     },
     {
-      "source": "/(robots.txt|sitemap.xml|favicon.ico)",
+      "source": "/(robots.txt|favicon.ico)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
     }
   ],
   "rewrites": [],
-  "redirects": []
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "ranjitha-makeover.vercel.app"
+        }
+      ],
+      "destination": "https://makeoversbyranjitha.online/:path*",
+      "permanent": true
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 # robots.txt — Makeovers by Ranjitha
-# https://ranjitha-makeover.vercel.app/
+# https://makeoversbyranjitha.online/
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://ranjitha-makeover.vercel.app/sitemap.xml
+Sitemap: https://makeoversbyranjitha.online/sitemap.xml
